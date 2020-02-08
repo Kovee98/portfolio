@@ -32,4 +32,7 @@ export default {
     .card {
         margin-bottom: 20px;
     }
+    .title {
+        font-family: $family-monospace;
+    }
 </style>

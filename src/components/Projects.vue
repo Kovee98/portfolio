@@ -39,7 +39,7 @@ export default {
                 {
                     name: 'Hydra',
                     type: 'Desktop App',
-                    desc: 'An HTTP client for sending requests and receiving responses.',
+                    desc: 'HTTP client for testing RESTful API endpoints.',
                     icon: require('../assets/img/hydra.png'),
                     link: '',
                     tags: ['Quasar', 'Vue', 'ElectronJS']
@@ -47,7 +47,7 @@ export default {
                 {
                     name: 'Cutty Buddy',
                     type: 'Mobile App',
-                    desc: 'A simple woodworking mobile app for calculating optomized cut lists from a list of required lengths of stock.',
+                    desc: 'Woodworking app for calculating optimized cut lists from a list of required lengths of stock.',
                     icon: require('../assets/img/cutty_buddy.png'),
                     link: '',
                     style: {
@@ -61,7 +61,7 @@ export default {
                 {
                     name: 'Waffle Gobble',
                     type: 'Mobile Game',
-                    desc: 'A game where you eat waffles that get launched into the air and you have to eat as many as you can by tapping on them.',
+                    desc: 'Single-click game where you tap to eat waffles launched into the air by a crazy toaster. Gobble up as many as you can before time runs out!',
                     icon: require('../assets/img/waffle_gobble.png'),
                     link: 'https://www.wafflegobble.com/',
                     tags: ['Unity', 'C#']
@@ -69,15 +69,15 @@ export default {
                 {
                     name: 'Selectal',
                     type: 'NPM Package',
-                    desc: 'A small JS library to help in the styling of html select boxes.',
+                    desc: 'JavaScript library to assist in the styling of HTML select boxes. 0 dependencies.',
                     icon: require('../assets/img/selectal.png'),
                     link: 'https://www.selectal.org/',
-                    tags: ['JavaScript']
+                    tags: ['JavaScript', 'VanillaJS', '0-dependency']
                 },
                 {
                     name: 'Comet',
                     type: 'Desktop App',
-                    desc: 'A visual Git client.',
+                    desc: 'Git client for the everyday management of repositories.',
                     icon: require('../assets/img/comet.png'),
                     link: '',
                     tags: ['ElectronJS', 'HTML', 'CSS', 'SCSS', 'JavaScript']

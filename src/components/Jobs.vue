@@ -32,7 +32,7 @@ export default {
                 {
                     company: 'Averitt Express',
                     title: 'Full Stack Software Engineer',
-                    desc: 'Worked in an agile software development team building RESTful API’s, working on the front and backends of customer and employee facing websites, setting up devops and automation configurations, and worked on a mobile app for dispatching freight.',
+                    desc: 'Worked in an agile software development team building RESTful API’s, working on the front and backends of customer and employee websites, setting up devops and automation configurations, and helped build a mobile app for truck drivers to manage their day-to-day field operations.',
                     start: 'Jan 2019',
                     end: 'Present',
                     tags: ['REST', 'API', 'Java', 'Spring MVC', 'Spring Boot', 'JSP', 'SQL', 'HTML', 'CSS', 'JavaScript', 'Cordova', 'RiotJS']

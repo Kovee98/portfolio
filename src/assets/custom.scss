@@ -1,6 +1,6 @@
 $footer-background-color: $dark;
 
-$primary: #00ff95;
+$primary: #5FA;
 $primary-invert: findColorInvert($primary);
 $twitter: #4099FF;
 $twitter-invert: findColorInvert($twitter);
@@ -23,3 +23,8 @@ $colors: (
 $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap');
+$family-monospace: 'Ubuntu Mono', monospace;
+$family-sans-serif: 'Ubuntu', sans-serif;

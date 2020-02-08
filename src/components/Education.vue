@@ -14,8 +14,8 @@
                             <time datetime="2016-1-1">{{school.grad}}</time>
                         </div>
 
-                        <span class="content" v-for="course in school.courses" :key="course.id">
-                            {{course}},
+                        <span class="content" v-for="(course, i) in school.courses" :key="i">
+                            {{course}}{{i >= school.courses.length - 1 ? '' : ','}}
                         </span>
                     </div>
                 </div>
