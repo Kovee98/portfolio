@@ -4,6 +4,7 @@
             <div class="columns">
                 <div class="column"/>
                 <div class="column">
+                    <p>kovee98@gmail.com</p>
                     <p>jlkovalchik@gmail.com</p>
                     <p>Cookeville, TN</p>
                 </div>
