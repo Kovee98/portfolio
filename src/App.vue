@@ -1,8 +1,8 @@
 <template>
     <div id="app" class="has-background-light">
         <Header/>
-        <Jobs/>
         <Projects/>
+        <Jobs/>
         <Education/>
         <Footer/>
     </div>

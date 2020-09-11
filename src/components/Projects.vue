@@ -23,7 +23,7 @@
                         <div class="content">
                             {{project.desc}}
                         </div>
-                        <span v-for="tag in project.tags" :key="tag.id" class="tech has-text-primary">#{{tag.toLowerCase()}}</span>
+                        <b-tag v-for="tag in project.tags" type="is-grey" :key="tag.id" class="tech has-text-white">{{tag.toLowerCase()}}</b-tag>
                     </div>
                 </div>
             </div>
@@ -36,6 +36,22 @@ export default {
     data () {
         return {
             projects: [
+                {
+                    name: 'Couchman',
+                    type: 'Web App',
+                    desc: 'A multi-instance CouchDB manager with filtering, sorting, and a simple view system. Meant to be simple, intuitive, and persistent.',
+                    icon: require('../assets/img/couchman.png'),
+                    link: '',
+                    tags: ['Vue', 'CouchDB', 'Bootstrap-Vue', 'API']
+                },
+                {
+                    name: 'BittyCSS',
+                    type: 'CSS Framework',
+                    desc: 'A very small CSS framework that works without classes. Who says prototypes have to be ugly?',
+                    // icon: require('../assets/img/couchman.png'),
+                    link: '',
+                    tags: ['SCSS', 'CSS']
+                },
                 {
                     name: 'Hydra',
                     type: 'Desktop App',
@@ -91,5 +107,6 @@ export default {
 <style lang="scss">
     .tech {
         margin-right: 10px;
+        font-size: 1.2rem;
     }
 </style>

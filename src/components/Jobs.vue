@@ -16,7 +16,7 @@
                         <div class="content">
                             {{job.desc}}
                         </div>
-                        <span v-for="tag in job.tags" :key="tag.id" class="tech has-text-primary">#{{tag.toLowerCase()}}</span>
+                        <b-tag v-for="tag in job.tags" type="is-grey" :key="tag.id" class="tech has-text-white">{{tag.toLowerCase()}}</b-tag>
                     </div>
                 </div>
             </div>
