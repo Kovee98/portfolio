@@ -1,12 +1,26 @@
 <template>
-    <section class="section">
-        <div class="container">
+    <section class="section mb-6">
+        <div class="container is-max-desktop">
             <h1 class="title">Education</h1>
 
-            <div v-for="school in schools" :key="school.id">
-                <div class="card">
+            <div
+                v-for="school in schools"
+                :key="school.id"
+            >
+                <div class="card has-shadow">
                     <div class="card-content">
                         <div class="media">
+                            <div class="media-left">
+                                <figure
+                                    class="image is-48x48 is-rounded"
+                                    :style="school.style"
+                                >
+                                    <img
+                                        :src="school.icon"
+                                        class="is-rounded"
+                                    >
+                                </figure>
+                            </div>
                             <div class="media-content">
                                 <p class="title is-4">{{school.name}}</p>
                                 <p class="subtitle is-6">{{school.major}}</p>
@@ -14,8 +28,12 @@
                             <time datetime="2016-1-1">{{school.grad}}</time>
                         </div>
 
-                        <span class="content" v-for="(course, i) in school.courses" :key="i">
-                            {{course}}{{i >= school.courses.length - 1 ? '' : ','}}
+                        <span
+                            v-for="course in school.courses"
+                            :key="course.id"
+                            class="tag is-light mr-2 mb-2"
+                        >
+                            {{course}}
                         </span>
                     </div>
                 </div>
@@ -24,19 +42,23 @@
     </section>
 </template>
 
-<script>
-export default {
-    data () {
-        return {
-            schools: [
-                {
-                    name: 'Tennessee Tech University',
-                    major: 'Computer Science - Software Engineering',
-                    grad: 'May 2019',
-                    courses: [ 'Principles of Computing', 'Problem Solving and Computer Programming', 'Data Structures and Algorithms', 'Object-Oriented Programming and Design', 'Design of Algorithms', 'Discrete Structures for Computer Science', 'Databases', 'Computer Organization and Assembly Programming', 'Parallel Computing', 'Software Engineering', 'Programming Languages', 'Operating Systems', 'Computer Architecture' ]
-                }
-            ]
-        };
-    }
-};
+<script lang="ts">
+    import { defineComponent } from 'vue';
+    import ttuLogo from '../assets/img/ttu_purple.png';
+
+    export default defineComponent({
+        setup () {
+            return {
+                schools: [
+                    {
+                        name: 'Tennessee Tech University',
+                        major: 'Computer Science - Software Engineering',
+                        grad: 'May 2019',
+                        icon: ttuLogo,
+                        courses: ['Principles of Computing', 'Problem Solving and Computer Programming', 'Data Structures and Algorithms', 'Object-Oriented Programming and Design', 'Design of Algorithms', 'Discrete Structures for Computer Science', 'Databases', 'Computer Organization and Assembly Programming', 'Parallel Computing', 'Software Engineering', 'Programming Languages', 'Operating Systems', 'Computer Architecture']
+                    }
+                ]
+            };
+        }
+    });
 </script>

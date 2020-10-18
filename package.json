@@ -1,35 +1,50 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "image:build": "docker build -t kovee98/portfolio:test .",
-    "image:push": "docker push kovee98/portfolio:test",
-    "image:run": "docker run -d -p 8080:80 --name portfolio-test kovee98/portfolio:test"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "bump-version": "npm version --no-git-tag-version $VERSION",
+    "image:build": "docker build -t portfolio:test .",
+    "image:run": "docker run -it -p 8085:80 --name portfolio-test portfolio:test",
+    "image:rm": "docker stop portfolio-test & docker rm portfolio-test",
+    "image:rebuild": "npm run image:rm & npm run image:build & npm run image:run"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.26",
-    "@fortawesome/free-solid-svg-icons": "^5.12.0",
-    "@fortawesome/vue-fontawesome": "^0.1.9",
-    "buefy": "^0.8.20",
-    "core-js": "^3.4.4",
-    "vue": "^2.6.12"
+    "bulma": "^0.9.1",
+    "vue": "^3.0.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.6",
-    "@vue/cli-plugin-eslint": "^4.5.6",
-    "@vue/cli-service": "^4.5.6",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^5.16.0",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.1.1",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "@vue/compiler-sfc": "^3.0.1",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "eslint": "^7.11.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^5.0.0",
+    "husky": "^4.3.0",
     "lint-staged": "^9.5.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.0",
-    "vue-template-compiler": "^2.6.12"
+    "sass": "^1.27.0",
+    "typescript": "^4.0.3",
+    "vite": "^1.0.0-rc.4"
   },
   "gitHooks": {
     "pre-commit": "lint-staged"
