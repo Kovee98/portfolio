@@ -5,10 +5,11 @@ module.exports = {
     },
     extends: [
         'plugin:vue/essential',
-        '@vue/standard'
+        '@vue/standard',
+        '@vue/typescript/recommended'
     ],
     parserOptions: {
-        parser: 'babel-eslint'
+        ecmaVersion: 2020
     },
     rules: {
     // allow async-await
@@ -36,7 +37,20 @@ module.exports = {
         'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
         indent: ['error', 4],
         'vue/html-indent': ['error', 4],
-        'vue/script-indent': ['error', 4],
+        'vue/script-indent': ['error', 4, {
+            baseIndent: 1,
+            switchCase: 1
+        }],
+        'vue/valid-template-root': 'off',
+        'vue/valid-v-model': 'off',
         semi: ['error', 'always', { omitLastInOneLineBlock: false }]
-    }
+    },
+    overrides: [
+        {
+            files: ['*.vue'],
+            rules: {
+                indent: 'off'
+            }
+        }
+    ]
 };

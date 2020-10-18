@@ -1,6 +1,8 @@
 $footer-background-color: $dark;
 
-$primary: #5FA;
+$primary: #0f37ff;
+$secondary: #ff00ad;
+
 $primary-invert: findColorInvert($primary);
 $twitter: #4099FF;
 $twitter-invert: findColorInvert($twitter);
@@ -26,6 +28,12 @@ $link-invert: $primary-invert;
 $link-focus-border: $primary;
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono&display=swap');
-$family-monospace: 'Ubuntu Mono', monospace;
-$family-sans-serif: 'Ubuntu', sans-serif;
+@font-face {
+    font-family: 'Courgette';
+    src: url('../assets/font/Courgette-Regular.ttf');
+    font-weight: normal;
+    font-style:  normal;
+}
+
+$family-monospace: 'Courgette', cursive;
+$family-sans-serif: 'Courgette', cursive;
