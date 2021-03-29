@@ -1,7 +1,7 @@
 <template>
     <div id="app" class="has-background-light">
         <Header/>
-        <Projects :projects="projects"/>
+        <ProjectsSection :projects="projects"/>
         <Jobs :jobs="jobs"/>
         <Education :education="education"/>
         <Footer/>
@@ -12,7 +12,7 @@
     import { defineComponent, onBeforeMount, reactive } from 'vue';
     import Header from './components/Header.vue';
     import Jobs from './components/Jobs.vue';
-    import Projects from './components/Projects.vue';
+    import ProjectsSection from './components/ProjectsSection.vue';
     import Education from './components/Education.vue';
     import Footer from './components/Footer.vue';
 
@@ -21,14 +21,16 @@
         components: {
             Header,
             Jobs,
-            Projects,
+            ProjectsSection,
             Education,
             Footer
         },
         setup () {
-            let projects = reactive([]);
-            let jobs = reactive([]);
-            let education = reactive([]);
+            const state = reactive({
+                projects: [],
+                jobs: [],
+                education: []
+            });
 
             onBeforeMount(() => {
                 const auth = btoa('portfolio:QbS7t3xFaz4Xi3');
@@ -43,22 +45,14 @@
                     .then((res) => res.rows)
                     .then((docs) => {
                         if (docs) {
-                            projects = docs.find((doc: any) => doc.id === 'projects').doc.items;
-                            jobs = docs.find((doc: any) => doc.id === 'experience').doc.items;
-                            education = docs.find((doc: any) => doc.id === 'education').doc.items;
-
-                            console.log('projects:', projects);
-                            console.log('jobs:', jobs);
-                            console.log('education:', education);
+                            state.projects = docs.find((doc: any) => doc.id === 'projects').doc.items;
+                            state.jobs = docs.find((doc: any) => doc.id === 'experience').doc.items;
+                            state.education = docs.find((doc: any) => doc.id === 'education').doc.items;
                         }
                     });
             });
 
-            return {
-                projects,
-                jobs,
-                education
-            };
+            return state;
         }
     });
 </script>
