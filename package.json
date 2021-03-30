@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "npx eslint .",
-    "lint:fix": "npx eslint . --fix",
+    "lint:fix": "npx eslint ./src --fix",
     "bump-version": "npm version --no-git-tag-version $VERSION",
     "image:build": "docker build -t portfolio:test .",
     "image:run": "docker run -it -p 8085:80 --name portfolio-test portfolio:test",

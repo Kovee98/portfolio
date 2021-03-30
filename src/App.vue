@@ -38,7 +38,7 @@
                 fetch('http://couchdb.kovalchik.cloud/portfolio/_all_docs?include_docs=true', {
                     headers: {
                         'Content-Type': 'application/json',
-                        Authorization: `Basic ${auth}`
+                        'Authorization': `Basic ${auth}`
                     }
                 })
                     .then((res) => res.json())
