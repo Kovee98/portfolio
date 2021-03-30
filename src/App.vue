@@ -2,7 +2,7 @@
     <div id="app" class="has-background-light">
         <Header/>
         <ProjectsSection :projects="projects"/>
-        <Jobs :jobs="jobs"/>
+        <ExperienceSection :jobs="jobs"/>
         <Education :education="education"/>
         <Footer/>
     </div>
@@ -11,7 +11,7 @@
 <script lang="ts">
     import { defineComponent, onBeforeMount, reactive } from 'vue';
     import Header from './components/Header.vue';
-    import Jobs from './components/Jobs.vue';
+    import ExperienceSection from './components/ExperienceSection.vue';
     import ProjectsSection from './components/ProjectsSection.vue';
     import Education from './components/Education.vue';
     import Footer from './components/Footer.vue';
@@ -20,7 +20,7 @@
         name: 'app',
         components: {
             Header,
-            Jobs,
+            ExperienceSection,
             ProjectsSection,
             Education,
             Footer
