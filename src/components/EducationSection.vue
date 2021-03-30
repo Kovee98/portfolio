@@ -16,7 +16,7 @@
                                     :style="school.style"
                                 >
                                     <img
-                                        :src="school.icon"
+                                        :src="school.logo"
                                         class="is-rounded"
                                     >
                                 </figure>
@@ -25,7 +25,7 @@
                                 <p class="title is-4">{{school.name}}</p>
                                 <p class="subtitle is-6">{{school.major}}</p>
                             </div>
-                            <time datetime="2016-1-1">{{school.grad}}</time>
+                            <time datetime="2016-1-1">{{school.date}}</time>
                         </div>
 
                         <span
@@ -44,21 +44,11 @@
 
 <script lang="ts">
     import { defineComponent } from 'vue';
-    import ttuLogo from '../assets/img/ttu_purple.png';
 
     export default defineComponent({
-        setup () {
-            return {
-                schools: [
-                    {
-                        name: 'Tennessee Tech University',
-                        major: 'Computer Science - Software Engineering',
-                        grad: 'May 2019',
-                        icon: ttuLogo,
-                        courses: ['Principles of Computing', 'Problem Solving and Computer Programming', 'Data Structures and Algorithms', 'Object-Oriented Programming and Design', 'Design of Algorithms', 'Discrete Structures for Computer Science', 'Databases', 'Computer Organization and Assembly Programming', 'Parallel Computing', 'Software Engineering', 'Programming Languages', 'Operating Systems', 'Computer Architecture']
-                    }
-                ]
-            };
+        name: 'EducationSection',
+        props: {
+            schools: Array
         }
     });
 </script>

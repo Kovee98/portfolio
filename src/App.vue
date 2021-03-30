@@ -3,7 +3,7 @@
         <Header/>
         <ProjectsSection :projects="projects"/>
         <ExperienceSection :jobs="jobs"/>
-        <Education :education="education"/>
+        <EducationSection :schools="schools"/>
         <Footer/>
     </div>
 </template>
@@ -13,7 +13,7 @@
     import Header from './components/Header.vue';
     import ExperienceSection from './components/ExperienceSection.vue';
     import ProjectsSection from './components/ProjectsSection.vue';
-    import Education from './components/Education.vue';
+    import EducationSection from './components/EducationSection.vue';
     import Footer from './components/Footer.vue';
 
     export default defineComponent({
@@ -22,14 +22,14 @@
             Header,
             ExperienceSection,
             ProjectsSection,
-            Education,
+            EducationSection,
             Footer
         },
         setup () {
             const state = reactive({
                 projects: [],
                 jobs: [],
-                education: []
+                schools: []
             });
 
             onBeforeMount(() => {
@@ -47,7 +47,7 @@
                         if (docs) {
                             state.projects = docs.find((doc: any) => doc.id === 'projects').doc.items;
                             state.jobs = docs.find((doc: any) => doc.id === 'experience').doc.items;
-                            state.education = docs.find((doc: any) => doc.id === 'education').doc.items;
+                            state.schools = docs.find((doc: any) => doc.id === 'education').doc.items;
                         }
                     });
             });
