@@ -15,6 +15,7 @@
     import ProjectsSection from './components/ProjectsSection.vue';
     import EducationSection from './components/EducationSection.vue';
     import FooterSection from './components/FooterSection.vue';
+    import { CouchRow, Project, Job, School } from './types';
 
     export default defineComponent({
         name: 'app',
@@ -45,9 +46,9 @@
                     .then((res) => res.rows)
                     .then((docs) => {
                         if (docs) {
-                            state.projects = docs.find((doc: any) => doc.id === 'projects').doc.items;
-                            state.jobs = docs.find((doc: any) => doc.id === 'experience').doc.items;
-                            state.schools = docs.find((doc: any) => doc.id === 'education').doc.items;
+                            state.projects = docs.find((doc: CouchRow<Project>) => doc.id === 'projects').doc.items;
+                            state.jobs = docs.find((doc: CouchRow<Job>) => doc.id === 'experience').doc.items;
+                            state.schools = docs.find((doc: CouchRow<School>) => doc.id === 'education').doc.items;
                         }
                     });
             });
