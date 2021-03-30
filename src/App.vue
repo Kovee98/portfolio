@@ -1,29 +1,29 @@
 <template>
     <div id="app" class="has-background-light">
-        <Header/>
+        <HeaderSection/>
         <ProjectsSection :projects="projects"/>
         <ExperienceSection :jobs="jobs"/>
         <EducationSection :schools="schools"/>
-        <Footer/>
+        <FooterSection/>
     </div>
 </template>
 
 <script lang="ts">
     import { defineComponent, onBeforeMount, reactive } from 'vue';
-    import Header from './components/Header.vue';
+    import HeaderSection from './components/HeaderSection.vue';
     import ExperienceSection from './components/ExperienceSection.vue';
     import ProjectsSection from './components/ProjectsSection.vue';
     import EducationSection from './components/EducationSection.vue';
-    import Footer from './components/Footer.vue';
+    import FooterSection from './components/FooterSection.vue';
 
     export default defineComponent({
         name: 'app',
         components: {
-            Header,
+            HeaderSection,
             ExperienceSection,
             ProjectsSection,
             EducationSection,
-            Footer
+            FooterSection
         },
         setup () {
             const state = reactive({
