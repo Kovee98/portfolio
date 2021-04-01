@@ -36,7 +36,7 @@
             onBeforeMount(() => {
                 const auth = btoa('portfolio:QbS7t3xFaz4Xi3');
 
-                fetch('http://couchdb.kovalchik.cloud/portfolio/_all_docs?include_docs=true', {
+                fetch('https://couchdb.kovalchik.cloud/portfolio/_all_docs?include_docs=true', {
                     headers: {
                         'Content-Type': 'application/json',
                         'Authorization': `Basic ${auth}`
