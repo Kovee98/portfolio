@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+# [1.1.0](https://github.com/Kovee98/portfolio/compare/v1.0.0...v1.1.0) (2021-04-01)
+
+
+### Bug Fixes
+
+* **ts:** add types ([0ae6e76](https://github.com/Kovee98/portfolio/commit/0ae6e7649253cbf90abeb57d220b8eb079b48ba1))
+
+
+### Features
+
+* **projects:** switch to using couchdb data ([2d8ac9b](https://github.com/Kovee98/portfolio/commit/2d8ac9bdd8523e2cd85e2c12f6ceafea6a457cba))
+
 # 1.0.0 (2020-10-18)
 
 
