@@ -18,7 +18,7 @@
                                     class="image is-48x48"
                                     :style="project.style"
                                 >
-                                    <img :src="project.logo" >
+                                    <img :src="`https://firebasestorage.googleapis.com/v0/b/portfolio-675d3.appspot.com/o/${encodeURIComponent(project.logo)}?alt=media`">
                                 </figure>
                             </div>
                             <div class="media-content">
