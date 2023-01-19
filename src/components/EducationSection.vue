@@ -16,7 +16,7 @@
                                     :style="school.style"
                                 >
                                     <img
-                                        :src="school.logo"
+                                        :src="`https://firebasestorage.googleapis.com/v0/b/portfolio-675d3.appspot.com/o/${encodeURIComponent(school.logo)}?alt=media`"
                                         class="is-rounded"
                                     >
                                 </figure>

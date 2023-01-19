@@ -19,7 +19,7 @@
                                     :style="job.style"
                                 >
                                     <img
-                                        :src="job.logo"
+                                        :src="`https://firebasestorage.googleapis.com/v0/b/portfolio-675d3.appspot.com/o/${encodeURIComponent(job.logo)}?alt=media`"
                                         class="is-rounded"
                                     >
                                 </figure>
